@@ -20,8 +20,8 @@ class Tipo_cambioController extends Controller
     }
     public function index()
     {
-        $tipo_cambio = tipo_cambio::orderBy('created_at', 'DESC')->paginate();
-        return view('tc.inde', [
+        $tipo_cambio = tipo_cambio::orderBy('created_at', 'DESC')->paginate(10);
+        return view('tc.index', [
             'tipo_cambios' => $tipo_cambio,
         ]);
     }
@@ -33,7 +33,7 @@ class Tipo_cambioController extends Controller
      */
     public function create()
     {
-        return view('tc.created', [
+        return view('tc.create', [
             'tipo_cambio' => new Tipo_cambio
         ]);
     }
@@ -72,7 +72,7 @@ class Tipo_cambioController extends Controller
     {
         $tipo_cambio = Tipo_cambio::find($id);
 
-        return view('tc.edite', compact('tipo_cambio'));
+        return view('tc.edit', compact('tipo_cambio'));
     }
 
     /**
