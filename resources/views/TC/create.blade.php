@@ -12,7 +12,7 @@
     <x-guest-layout>
         <x-auth-card>
             <form method="POST" action="{{route('tipo_cambio.store')}}">
-                @include('tc.partials.form')
+                @include('TC.partials.form')
             </form>
         </x-auth-card>
     </x-guest-layout>
