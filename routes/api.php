@@ -21,4 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Route::apiResource('tipo-cambio/{apikey}/', 'App\Http\Controllers\api\Tipo_cambioController@index')->middleware('APIkey');
 
 //Route::get('tipo-cambio', 'App\Http\Controllers\api\Tipo_cambioControllerr@index');
-Route::get('tipo-cambio/{apikey}', 'App\Http\Controllers\api\Tipo_cambioController@index')->middleware('APIkey');
+Route::get('tipo-cambio/{apikey}', 'App\Http\Controllers\Api\Tipo_cambioController@index')->middleware('APIkey');
